@@ -1,25 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css"
+// import Header from './Components/Navigation/Header/Header';
+import Movies from './Components/Movies'
+import Sidebar from './Components/Navigation/Sidebar'
+import Directors from './Components/Directors'
+import Categories from './Components/Categories'
+import { Row, Col } from 'react-bootstrap';
+import { BrowserRouter, Route } from 'react-router-dom'
+import { Users } from './Components/Users/Users';
+import Invoices from './Components/Invoices';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div>
+        <Row style={{ margin: 0, padding: 0 }}>
+          <Col style={{ position: "fixed", height: "100%", overflowY: "scroll" }}>
+            <Sidebar />
+            <Route path="/" exact render={() => <h1 style={{ marginLeft: 65 }}>Home</h1>} />
+            <Route path="/movies" component={Movies} />
+            <Route path="/directors" component={Directors} />
+            <Route path="/categories" component={Categories} />
+            <Route path="/users" component={Users} />
+            <Route path="/invoices" component={Invoices} />
+          </Col>
+        </Row>
+      </div >
+    </BrowserRouter>
   );
 }
 

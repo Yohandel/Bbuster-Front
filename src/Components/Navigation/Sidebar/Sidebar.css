@@ -1,0 +1,9 @@
+.sideNav{
+    top: 0;
+    left: 0;
+    right: 65;
+    height: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
+}

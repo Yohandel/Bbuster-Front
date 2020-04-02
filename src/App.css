@@ -24,9 +24,31 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+button.btn.btn.react-bs-table-add-btn.btn-inst {
+  background-color: #4DE85F; 
 }
+
+button.btn.btn.react-bs-table-add-btn.btn-inst:hover {
+  background-color:#45D14A;
+  color: #070707;
+}
+
+.fa-film {
+  margin-right: 5px;
+}
+
+
+.btn-custom {
+  background-color: #4DE85F !important; 
+}
+
+.btn-custom:hover{
+  background-color:#45D14A !important;
+  color: #070707;
+}
+
+
 
 @keyframes App-logo-spin {
   from {
